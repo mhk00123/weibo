@@ -12,7 +12,7 @@
         <p>一切，將從這里開始</p>
 
         <p>
-            <a href="#" class="btn btn-lg btn-success" role="button">Sign Up Now!</a>
+            <a href="{{ route('signup') }}" class="btn btn-lg btn-success" role="button">Sign Up Now!</a>
         </p>
     </div>
 
