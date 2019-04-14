@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     {{--Link CSS File --}}
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     <title>@yield('title', 'Weibo App') - Laravel</title>
 </head>
