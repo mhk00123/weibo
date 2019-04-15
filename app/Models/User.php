@@ -39,4 +39,11 @@ class User extends Authenticatable
 
     //2019-4-15 - 指定User用戶使用 users資料表
     protected $table = 'users';
+
+    //2019-4-15 - 全球通用頭像
+    public function gravatar($size = '100')
+    {
+        $hash = md5(strtolower(trim($this->attributes['email'])));
+        return "http://www.gravatar.com/avatar/$hash?s=$size";
+    }
 }
