@@ -190,9 +190,9 @@
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="141" />
-    <option name="y" value="111" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="158" />
+    <option name="y" value="-11" />
     <option name="width" value="1440" />
     <option name="height" value="810" />
   </component>
