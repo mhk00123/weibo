@@ -22,8 +22,10 @@ class SessionsController extends Controller
         ]);
 
         //若Email && Password正確
+
         //attempt為laravel自帶的驗證功能
-        if (Auth::attempt($credentials)) {
+        //Auth能接收2個參數 1)需驗證的數組 2)是否有tick"記住我"的bool
+        if (Auth::attempt($credentials, $request->has('remember'))) {
             session()->flash('success', 'Welcome Back!');
             return redirect()->route('users.show', [Auth::user()]);
         } else {
