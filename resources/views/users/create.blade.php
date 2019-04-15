@@ -8,6 +8,9 @@
                 <h5>Sign Up</h5>
             </div>
             <div class="card-body">
+                {{-- 增加錯誤提示 --}}
+                @include('shared._errors')
+
                 <form method="POST" action="{{ route('users.store') }}">
                     {{-- csrf_field -> 為跨域傳送請求 --}}
                     {{ csrf_field() }}
