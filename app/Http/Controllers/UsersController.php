@@ -35,7 +35,10 @@ class UsersController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        //---(3)成功後引導到個人資料頁面
+        //---(3)成功後引導到個人資料頁面 + 檢查Session
+        //如有則自動登錄
+        Auth::login($user);
+        //無則創建新Session
         session()->flash('success', 'Welcome for your new journey');
         return redirect()->route('users.show', [$user]);
     }
